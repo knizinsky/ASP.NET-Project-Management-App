@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h1>Witaj w Systemie Zarządzania Projektami!</h1>
+    <br />
+    <p>Zarządzaj efektywnie projektami za pomocą naszej niesamowitej platformy.</p>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Panel zarządzania projektami</h5>
+                    <p class="card-text">Tutaj możesz wygodnie zarządzać swoimi projektami.</p>
+                    <a class="btn btn-primary" text-light" asp-area="" asp-controller="Project" asp-action="Index">Panel projektów</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tworzenie Projektów</h5>
+                    <p class="card-text">Łatwo twórz nowe projekty i określ ich szczegóły.</p>
+                    <a class="btn btn-primary" text-light" asp-area="" asp-controller="Project" asp-action="Create">Utwórz Projekt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

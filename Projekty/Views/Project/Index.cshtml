@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Projekty.Models.Project>
+
+@{
+    ViewData["Title"] = "Panel zarządzania projektami";
+}
+
+<h2 class="text-center">Panel zarządzania projektami</h2>
+<div class="text-center mb-4">
+    <a class="btn btn-primary bg-gradient px-4 fs-5 my-3" asp-action="Create">Dodaj nowy projekt</a>
+</div>
+<table class="table table-striped border-dark table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nazwa projektu</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>
+                    <a class="btn btn-primary bg-gradient" asp-action="Edit" asp-route-id="@item.Id">Edytuj</a>
+                    <a class="btn btn-secondary bg-gradient" asp-action="Details" asp-route-id="@item.Id">Szczegóły</a>
+                    <a class="btn btn-danger bg-gradient" asp-action="Delete" asp-route-id="@item.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
